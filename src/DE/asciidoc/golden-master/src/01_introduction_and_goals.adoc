@@ -11,6 +11,7 @@ Einerseits die Erfüllung bestimmter fachlicher Aufgabenstellungen der Stakehold
 === Aufgabenstellung
 (engl.: Requirements Overview)
 
+ifdef::arc42help[]
 [role="arc42help"]
 ****
 Kurzbeschreibung der fachlichen Aufgabenstellung, Extrakt (oder Abstract) der Anforderungsdokumente.
@@ -41,10 +42,13 @@ Kurzbeschreibung der wichtigsten:
 
 Hier können Sie aus den Anforderungsdokumenten wiederverwenden - halten Sie diese Auszüge so knapp wie möglich und wägen Sie Lesbarkeit und Redundanzfreiheit gegeneinander ab.
 ****
+endif::arc42help[]
 
 === Qualitätsziele
 (engl.: Quality Goals)
 
+
+ifdef::arc42help[]
 [role="arc42help"]
 ****
 .Inhalt
@@ -77,9 +81,11 @@ Für alle, die es nicht so genau wissen wollen: ein lesbarer Auszug davon ist im
 [[[HruschkaRupp]]] "Agile Software- Entwicklung für Embedded Real-Time Systems mit der UML" (Hruschka, Rupp, Carl- Hanser-Verlag, 2002
 auf Seite 9 zu finden.
 ****
+endif::arc42help[]
 
 === Stakeholder
 
+ifdef::arc42help[]
 [role="arc42help"]
 ****
 .Inhalt
@@ -135,6 +141,7 @@ Hinweis: I.d.R. hat man nicht gleichzeitig Unternehmensarchitekten, eine Archite
 |Weitere externe Stakeholder|	z.B. Verbände, Vereine, Mitbewerber, konkurrierende Geschäftsbereiche, Presse. Sind häufig nicht direkt vom Projekt betroffen, beeinflussen Entscheidungen aber dennoch
 |===
 ****
+endif::arc42help[]
 
 Die folgende Tabelle zeigt Ihre konkreten Stakeholder für das System sowie deren Interessen oder Beteiligung.
 
