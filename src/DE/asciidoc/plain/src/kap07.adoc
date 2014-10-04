@@ -1,3 +1,5 @@
+[[section-deployment-view]]
+
 
 == Verteilungssicht
 
@@ -11,6 +13,8 @@
 *  Beschreibung
 *  Leistungsmerkmale
 *  Zugeordnete Softwarebausteine
+*  Sonstige Verwaltungsinformationen
+*  Offene Punkte
 
 
 ==== Kanäle / Netze

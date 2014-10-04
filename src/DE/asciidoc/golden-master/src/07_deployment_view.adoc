@@ -41,7 +41,7 @@ Struktur gemäß Knoten-Template (node-template):
 
 *  Beschreibung
 *  Leistungsmerkmale
-*  Zugeordnete Software- Bausteine
+*  Zugeordnete Softwarebausteine
 *  Sonstige Verwaltungsinformationen
 *  Offene Punkte
 ****

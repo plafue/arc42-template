@@ -2,10 +2,13 @@
 == Risiken
 
 
-[options="header"]
+[cols="1,2" options="header"]
 .Risiken
 |===
-|Risiko |Priorität |Konsequenz |Erläuterung
+|Risiko
+|Priorität
+|Konsequenz
+|Erläuterung
 
 |
 |

@@ -1,9 +1,7 @@
-
+[[section-quality-scenarios]]
 == Qualitätsszenarien
 
 === Qualitätsbaum
-
-
 
 === Bewertungsszenarien
 
