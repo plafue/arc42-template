@@ -8,3 +8,5 @@ gradle-app.setting
 .nb-gradle-properties
 src_gen
 .idea
+**/target
+**/generated-sources
