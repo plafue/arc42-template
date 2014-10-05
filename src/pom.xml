@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.plafue.test</groupId>
+    <artifactId>crazyasciidoc_stuff</artifactId>
+    <version>0.1-snapshot</version>
+
+    <properties>
+        <replacer.help_role_section_regex>^\[role=\"arc42help\"\](\r\n|\n)(\*){4}.*?\*{4}(\r\n|\n)$</replacer.help_role_section_regex>
+        <replacer.all_adoc_files>${basedir}/**/*.adoc</replacer.all_adoc_files>
+        <replacer.inputFilePattern>(.*)\/golden-master\/src\/(.*\.adoc)</replacer.inputFilePattern>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>1.5.3</version>
+                <executions>
+                    <execution>
+                        <id>generate plain version</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                        <configuration>
+                            <filesToInclude>${replacer.all_adoc_files}</filesToInclude>
+                            <inputFilePattern>${replacer.inputFilePattern}</inputFilePattern>
+                            <outputFilePattern>$1\/generated-sources\/plain\/$2</outputFilePattern>
+                            <replacements>
+                                <replacement>
+                                    <token>${replacer.help_role_section_regex}</token>
+                                </replacement>
+                            </replacements>
+                            <regexFlags>
+                                <regexFlag>MULTILINE</regexFlag>
+                                <regexFlag>DOTALL</regexFlag>
+                            </regexFlags>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${basedir}</directory>
+                            <includes>
+                                <include>**/generated-sources/**/*.*</include>
+                                <include>**/generated-sources/**</include>
+                                <include>**/generated-sources</include>
+                            </includes>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <descriptorSourceDirectory>assembly</descriptorSourceDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
